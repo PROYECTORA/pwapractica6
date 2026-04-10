@@ -10,11 +10,15 @@
     <link rel="stylesheet" href="../assets/css/componentes/formularios.css">
     <link rel="stylesheet" href="../assets/css/componentes/botones.css">
 </head>
-<body style="background-color: var(--color-primario); display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+<!-- Se activa la clase bg-hotel y se eliminan los estilos manuales de color -->
+<body class="bg-hotel">
 
     <div class="login-card">
         <div style="text-align: center; margin-bottom: 25px;">
-            <h1 style="color: var(--color-primario); margin: 0; font-size: 1.8rem;">Hotel PWA</h1>
+            <!-- Vínculo del Logo Local -->
+            <img src="../assets/images/logo.png" alt="Logo Hotel" class="logo-login">
+            
+            <h1 style="color: var(--color-primario); margin: 5px 0 0 0; font-size: 1.8rem;">Hotel PWA</h1>
             <p style="color: #64748b; font-size: 0.9rem;">Gestión de Reservas</p>
         </div>
 
@@ -43,3 +47,9 @@
 
 </body>
 </html>
+
+
+
+
+
+

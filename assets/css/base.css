@@ -1,5 +1,6 @@
 /* ==========================================
    BASE.CSS: Variables de entorno y Reset
+   Actualizado: Integración de Identidad Visual
    ========================================== */
 
 :root {
@@ -19,6 +20,41 @@
     --sombra-suave: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
+/* --- NUEVAS CLASES DE IDENTIDAD VISUAL --- */
+
+/* Clase para el fondo del Login (Se aplica al body de login.php) */
+.bg-hotel {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../images/fondo-hotel.png') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Control de tamaño para el Logo en el Login */
+.logo-login {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Control de tamaño para el Logo en el Sidebar */
+.logo-sidebar {
+    width: 35px;
+    height: auto;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+/* --- RESET Y BASE ORIGINAL --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -36,3 +72,8 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+
+
+
+

@@ -1,6 +1,7 @@
 <?php
 /* ==========================================================
    VIEWS/ADMIN/CREAR.PHP: Formulario de Registro de Usuarios
+   Actualizado: Traducción visual de roles a español
    ========================================================== */
 
 session_start();
@@ -38,7 +39,7 @@ try {
 <body>
 
     <div class="wrapper">
-        <!-- Barra Lateral Manual (Hasta que hagamos includes) -->
+        <!-- Barra Lateral Manual -->
         <aside class="sidebar">
             <div class="sidebar-header">Hotel PWA - Admin</div>
             <nav class="sidebar-nav">
@@ -66,7 +67,6 @@ try {
                     
                     <h3 style="color: var(--color-primario); margin-bottom: 20px;">Datos del Usuario</h3>
 
-                    <!-- El formulario apunta a procesar_crear.php que haremos en el siguiente paso -->
                     <form action="procesar_crear.php" method="POST">
                         
                         <div class="form-group">
@@ -89,8 +89,20 @@ try {
                             <select id="role_id" name="role_id" class="form-control" required style="cursor: pointer;">
                                 <option value="" disabled selected>Selecciona un rol...</option>
                                 <?php foreach ($roles as $rol): ?>
+                                    <?php 
+                                        // TRADUCCIÓN VISUAL DE ROLES
+                                        $nombre_tecnico = $rol['name'];
+                                        switch ($nombre_tecnico) {
+                                            case 'Administrator':  $nombre_es = 'Administrador'; break;
+                                            case 'Hotel Manager': $nombre_es = 'Gerente del Hotel'; break;
+                                            case 'Receptionist':  $nombre_es = 'Recepcionista'; break;
+                                            case 'Customer':      $nombre_es = 'Cliente'; break;
+                                            case 'Supplier':      $nombre_es = 'Proveedor'; break;
+                                            default:              $nombre_es = $nombre_tecnico; break;
+                                        }
+                                    ?>
                                     <option value="<?php echo $rol['id']; ?>">
-                                        <?php echo htmlspecialchars($rol['name']); ?>
+                                        <?php echo htmlspecialchars($nombre_es); ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -109,3 +121,4 @@ try {
 
 </body>
 </html>
+
