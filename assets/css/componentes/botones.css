@@ -1,0 +1,50 @@
+/* ==========================================
+   BOTONES.CSS: Estilos modulares para botones
+   ========================================== */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.btn-primario {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.btn-primario:hover {
+    background-color: #0b7a6f;
+    box-shadow: var(--sombra-suave);
+}
+
+.btn-secundario {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.btn-secundario:hover {
+    background-color: #122542;
+    box-shadow: var(--sombra-suave);
+}
+
+.btn-peligro {
+    background-color: #ef4444;
+    color: var(--color-blanco);
+}
+
+.btn-peligro:hover {
+    background-color: #dc2626;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}

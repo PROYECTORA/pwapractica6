@@ -1,0 +1,38 @@
+/* ==========================================
+   BASE.CSS: Variables de entorno y Reset
+   ========================================== */
+
+:root {
+    /* Paleta Hotelera Profesional */
+    --color-primario: #1a365d;    /* Azul Marino Oscuro */
+    --color-secundario: #0d9488;  /* Verde Esmeralda/Turquesa */
+    --color-accent: #f59e0b;      /* Dorado/Ámbar para botones o alertas */
+    --color-fondo: #f8fafc;       /* Gris muy claro para el fondo */
+    --color-texto: #334155;        /* Gris oscuro para textos legibles */
+    --color-blanco: #ffffff;
+    --color-borde: #e2e8f0;
+    
+    /* Fuentes */
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Sombras */
+    --sombra-suave: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
